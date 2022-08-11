@@ -1,8 +1,33 @@
-body{
+.image{
     background-image: url(assets/back.jpg);
-    background-position: center;
-    background-size: cover;
+    background-position: cover;
 }
+
 #userContainer{
-    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.company, .address{
+    margin-top: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.company h5, .address h5{
+    font-size: 15px;
+    font-style: italic;
+}
+footer{
+    background-color: rgb(8, 215, 215);
+}
+.list{
+    list-style: none;
+    font-size: 15px;
+    font-weight: bold;
 }

@@ -10,31 +10,28 @@ fetch("https://jsonplaceholder.typicode.com/users?utm_source=Mailerlite&utm_medi
     userContainer.innerHTML = null;
 
     for(let i=0; i<data.length; i++){
-        userContainer.innerHTML += `<div class="row">
-        <div class="col-sm-6 my-3 -dark">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">${data[i].name}</h5>
-              <h5 class="card-title">${data[i].phone}</h5>
-              <h5 class="card-title">${data[i].username}</h5>
-              <h5 class="card-title">${data[i].email}</h5>
-              <h5 class="card-title">${data[i].website}</h5>
-              <button type="button" class="btn btn-light mr-5" onclick="toggleVisibility('card-address-${i}')">Show Address</button>
-              <button type="button" class="btn btn-light mr-5" onclick="toggleVisibility('card-company-${i}')">Show Company</button>
-              <div id="card-address-${i}" style="display: none;">
-                    <h5 class="card-title">${data[i].address.city}</h5>
-                    <h5 class="card-title">${data[i].address.street}</h5>
-                    <h5 class="card-title">${data[i].address.suite}</h5>
-                    <h5 class="card-title">${data[i].address.zipcode}</h5> 
-                </div>
-                <div id="card-company-${i}" style="display: none;">
-                <h5 class="card-title">${data[i].company.name}</h5>
-                <h5 class="card-title">${data[i].company.bs}</h5>
-                <h5 class="card-title">${data[i].company.catchPhrase}</h5> 
-                </div>
+        userContainer.innerHTML += `<div class="card m-5">
+        <div class="card-body">
+          <h5 class="card-title">Name : ${data[i].name}</h5>
+          <h5 class="card-title">Phone : ${data[i].phone}</h5>
+          <h5 class="card-title">Username : ${data[i].username}</h5>
+          <h5 class="card-title">Email : ${data[i].email}</h5>
+          <h5 class="card-title">Website : ${data[i].website}</h5>
+          <button type="button" class="btn btn-light mr-5" onclick="toggleVisibility('card-address-${i}')">Show Address</button>
+          <button type="button" class="btn btn-light mr-5" onclick="toggleVisibility('card-company-${i}')">Show Company</button>
+          <div id="card-address-${i}" style="display: none;" class="address">
+                <h5 class="card-title">City : ${data[i].address.city}</h5>
+                <h5 class="card-title">Street : ${data[i].address.street}</h5>
+                <h5 class="card-title">Suite : ${data[i].address.suite}</h5>
+                <h5 class="card-title">Zipcode : ${data[i].address.zipcode}</h5> 
             </div>
-          </div>
-        </div>`
+        <div id="card-company-${i}" style="display: none;" class="company">
+            <h5 class="card-title">Company name : ${data[i].company.name}</h5>
+            <h5 class="card-title">Company bs : ${data[i].company.bs}</h5>
+            <h5 class="card-title">Company catchphrase : ${data[i].company.catchPhrase}</h5> 
+        </div>
+        </div>
+      </div>    `
     }
 })
 
