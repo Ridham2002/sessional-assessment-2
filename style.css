@@ -31,3 +31,16 @@ footer{
     font-size: 15px;
     font-weight: bold;
 }
+.formBlog{
+    background-color: rgb(8, 215, 215);
+}
+h1{
+    text-align: center;
+    font-size: 25px;
+
+}
+h1:hover{
+    font-size: 30px;
+    transition: 0.3s;
+    color: blue;
+}
